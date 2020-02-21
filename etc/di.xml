@@ -3,7 +3,7 @@
         <arguments>
             <argument name="code" xsi:type="string">pronko_authorizenet</argument>
             <argument name="formBlockType" xsi:type="string">Magento\Payment\Block\Form\Cc</argument>
-            <argument name="infoBlockType" xsi:type="string">Magento\Payment\Block\ConfigurableInfo</argument>
+            <argument name="infoBlockType" xsi:type="string">PronkoAuthorizenetConfigurableInfo</argument>
             <argument name="valueHandlerPool" xsi:type="object">PronkoAuthorizenetValueHandlerPool</argument>
             <argument name="commandPool" xsi:type="object">PronkoAuthorizenetCommandPool</argument>
         </arguments>
@@ -61,6 +61,7 @@
             <argument name="requestBuilder" xsi:type="object">PronkoAuthorizenetChargeTransactionBuilder</argument>
             <argument name="transferFactory" xsi:type="object">Pronko\Authorizenet\Gateway\Http\TransferFactory</argument>
             <argument name="client" xsi:type="object">Pronko\Authorizenet\Gateway\Http\Client</argument>
+            <argument name="handler" xsi:type="object">PronkoAuthorizenetChargeHandler</argument>
         </arguments>
     </virtualType>
 
@@ -88,4 +89,20 @@
             <argument name="converter" xsi:type="object">Pronko\Authorizenet\Gateway\Converter\ArrayToJson</argument>
         </arguments>
     </type>
+
+    <virtualType name="PronkoAuthorizenetChargeHandler" type="Magento\Payment\Gateway\Response\HandlerChain">
+        <arguments>
+            <argument name="handlers" xsi:type="array">
+                <item name="payment_details" xsi:type="string">Pronko\Authorizenet\Gateway\Response\PaymentDetailsHandler</item>
+            </argument>
+        </arguments>
+    </virtualType>
+
+    <virtualType name="PronkoAuthorizenetConfigurableInfo" type="Magento\Payment\Block\ConfigurableInfo">
+        <arguments>
+            <argument name="data" xsi:type="array">
+                <item name="methodCode" xsi:type="string">pronko_authorizenet</item>
+            </argument>
+        </arguments>
+    </virtualType>
 </config>

@@ -13,6 +13,8 @@
                 <cctypes>VI,MC</cctypes>
                 <payment_action>authorize_capture</payment_action>
                 <debug>true</debug>
+                <paymentInfoKeys>auth_code,avs_result_code,cvv_result_code,cavv_result_code,account_number,account_type</paymentInfoKeys>
+                <privateInfoKeys>auth_code,avs_result_code,cvv_result_code,cavv_result_code</privateInfoKeys>
             </pronko_authorizenet>
         </payment>
     </default>
