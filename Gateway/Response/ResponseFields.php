@@ -10,14 +10,15 @@ interface ResponseFields
     const AVS_RESULT_CODE = 'avsResultCode';
     const CVV_RESULT_CODE = 'cvvResultCode';
     const CAVV_RESULT_CODE = 'cavvResultCode';
-    const TRANS_ID = 'transId';
-    const REF_TRANS_ID = 'refTransID';
-    const TRANS_HASH = 'transHash';
+    const TRANSACTION_ID = 'transId';
+    const REF_TRANSACTION_ID = 'refTransID';
+    const TRANSACTION_HASH = 'transHash';
     const TEST_REQUEST = 'testRequest';
     const ACCOUNT_NUMBER = 'accountNumber';
     const ACCOUNT_TYPE = 'accountType';
     const MESSAGES = 'messages';
-    const CODE = 'code';
-    const DESCRIPTION = 'description';
-    const TRANS_HASH_SHA2 = 'transHashSha2';
+    const MESSAGE_CODE = 'code';
+    const MESSAGE_DESCRIPTION = 'description';
+    const TRANSACTION_HASH_SHA2 = 'transHashSha2';
+    const REFERENCE_ID = 'refId';
 }

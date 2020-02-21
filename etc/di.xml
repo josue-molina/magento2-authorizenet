@@ -94,6 +94,7 @@
         <arguments>
             <argument name="handlers" xsi:type="array">
                 <item name="payment_details" xsi:type="string">Pronko\Authorizenet\Gateway\Response\PaymentDetailsHandler</item>
+                <item name="transaction_details" xsi:type="string">Pronko\Authorizenet\Gateway\Response\TransactionAdditionalInfoHandler</item>
             </argument>
         </arguments>
     </virtualType>
