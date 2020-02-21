@@ -15,6 +15,11 @@
                 <debug>true</debug>
                 <paymentInfoKeys>auth_code,avs_result_code,cvv_result_code,cavv_result_code,account_number,account_type</paymentInfoKeys>
                 <privateInfoKeys>auth_code,avs_result_code,cvv_result_code,cavv_result_code</privateInfoKeys>
+                <gateway_url_sandbox>https://apitest.authorize.net/xml/v1/request.api</gateway_url_sandbox>
+                <gateway_url>https://api.authorize.net/xml/v1/request.api</gateway_url>
+                <is_sandbox>1</is_sandbox>
+                <api_login_id>9yyANU22f</api_login_id>
+                <transaction_key>92Kc8sM5v98Y6x6Q</transaction_key>
             </pronko_authorizenet>
         </payment>
     </default>

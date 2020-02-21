@@ -3,6 +3,7 @@
 namespace Pronko\Authorizenet\Gateway\Request;
 
 use Magento\Payment\Gateway\Request\BuilderInterface;
+use Pronko\Authorizenet\Gateway\Config;
 
 class RequestBuilder implements BuilderInterface
 {
@@ -11,11 +12,18 @@ class RequestBuilder implements BuilderInterface
      */
     private $builderComposite;
 
+    /**
+     * @var Config
+     */
+    private $config;
+
     public function __construct(
-        BuilderInterface $builder
+        BuilderInterface $builder,
+        Config $config
     )
     {
         $this->builderComposite = $builder;
+        $this->config = $config;
     }
 
     public function build(array $buildSubject)
@@ -23,8 +31,8 @@ class RequestBuilder implements BuilderInterface
         return [
             'createTransactionRequest' => [
                 'merchantAuthentication' => [
-                    'name' => '9yyANU22f',
-                    'transactionKey' => '92Kc8sM5v98Y6x6Q'
+                    'name' => $this->config->getApiLoginId(),
+                    'transactionKey' => $this->config->getTransactionKey()
                 ],
                 'transactionRequest' => $this->builderComposite->build($buildSubject)
             ]

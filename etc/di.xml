@@ -106,4 +106,10 @@
             </argument>
         </arguments>
     </virtualType>
+
+    <type name="Pronko\Authorizenet\Gateway\Config">
+        <arguments>
+            <argument name="valueHandlerPool" xsi:type="object">PronkoAuthorizenetValueHandlerPool</argument>
+        </arguments>
+    </type>
 </config>
