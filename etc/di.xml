@@ -112,4 +112,8 @@
             <argument name="valueHandlerPool" xsi:type="object">PronkoAuthorizenetValueHandlerPool</argument>
         </arguments>
     </type>
+
+    <type name="Magento\Payment\Block\Info">
+        <plugin name="PronkoAuthorizenetAdditionalInfoLabels" type="Pronko\Authorizenet\Plugin\Payment\Block\Info" />
+    </type>
 </config>

@@ -6,4 +6,13 @@
             </argument>
         </arguments>
     </type>
+
+    <type name="PronkoAuthorizenetConfigurableInfo">
+        <arguments>
+            <argument name="data" xsi:type="array">
+                <item name="is_secure_mode" xsi:type="string">1</item>
+                <item name="methodCode" xsi:type="string">pronko_authorizenet</item>
+            </argument>
+        </arguments>
+    </type>
 </config>
